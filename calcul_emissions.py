@@ -89,7 +89,7 @@ def main():
     # distancia total recorreguda
     df['emissions_setmana'] = (
         df['viatges_mianigues']*d_mianigues+df['viatges_petanca']*d_petanca
-        + df['viatges_StAndreu']*d_andreu)
+        + df['viatges_StAndreu']*d_andreu)*emissions_cotxe
     df['emissions_acumulades'] = df['emissions_setmana'].cumsum()
     
     print(df)
