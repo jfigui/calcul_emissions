@@ -55,7 +55,7 @@ def main():
     # keyword arguments
     parser.add_argument(
         '--path', type=str,
-        default='/home/mdso/figuerasiventuraj/calcul_emissions/',
+        default='/home/jfigui/calcul_emissions/',
         help='nom del directory que conté els trajectes per linia per setmana')
         
     parser.add_argument(
