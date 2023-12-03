@@ -90,6 +90,9 @@ def main():
     df['emissions_setmana'] = (
         df['viatges_mianigues']*d_mianigues+df['viatges_petanca']*d_petanca
         + df['viatges_StAndreu']*d_andreu)*emissions_cotxe
+        
+    # setmana mobilitat
+    df['emissions_setmana'][df['setmana'] == 38] += 1110848 
     df['emissions_acumulades'] = df['emissions_setmana'].cumsum()
     
     print(df)
@@ -148,7 +151,7 @@ def plot_timeseries(df, fname_list, labelx='Setmana',
     2018.03.05 -jgr- added x-limit of x axis to avoid unwanted error messages
 
     """
-    fig, ax = plt.subplots(figsize=[10, 6], dpi=dpi)
+    fig, ax = plt.subplots(figsize=[15, 6], dpi=dpi)
 
     lab = None
     col = None
